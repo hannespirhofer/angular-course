@@ -27,4 +27,10 @@ export class CourseCardComponent {
       return 'beginner';
   }
 
+  cardStyles() {
+    return {
+      'color': 'black'
+    }
+  }
+
 }
