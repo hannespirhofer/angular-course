@@ -18,9 +18,13 @@ export class CourseCardComponent {
   courseEmitter = new EventEmitter<Course>();
 
   onCourseViewed() {
-
     this.courseEmitter.emit(this.course);
+  }
 
+  cardClasses() {
+
+    if (this.course.category == 'BEGINNER')
+      return 'beginner';
   }
 
 }

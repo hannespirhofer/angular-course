@@ -6,18 +6,21 @@
 </div>
 
 <div class="courses">
-  @for (course of courses; track course.id; let index = $index; let count = $count) {
 
-  <h1>Count: {{count}}</h1>
+
+  <!-- Can use directly $first instead of defining to let first. Just track
+    need to be set in order so that Angular knows which element to update
+    -> better performance instead of relaoding the whole -->
+  @for (course of courses; track course.id; let index = $index; let count =
+  $count; let first = $first; let last = $last; let even = $even; let odd = $odd) {
 
   <course-card
     (courseSelected)="onCourseSelected($event)"
     [index]="index"
-    [course]="course"/>
+    [course]="course"
+  />
 
+  } @empty {
+  <h1>No courses found</h1>
   }
-  @empty {
-    <h1>No courses found</h1>
-  }
-
 </div>

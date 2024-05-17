@@ -1,6 +1,7 @@
-<div class="course-card">
-  <div class="course-title">
-    {{index}} {{ course.description }}
+<div class="course-card" *ngIf="course"
+  [ngClass]="cardClasses()">
+  <div class="course-title" [style.text-decoration]="'underline'" [ngStyle]="{'color': 'blue'}">
+    {{index+1 + ': ' + course.description }}
   </div>
   <img
     width="300"
