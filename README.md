@@ -1,5 +1,5 @@
 
-##  Angular Core Deep Dive (Video Course) - Im on Master
+##  Angular Core Deep Dive (Video Course)
 
 This repository contains the code of the [Angular Core Deep Dive](https://angular-university.io/course/angular-course).
 
