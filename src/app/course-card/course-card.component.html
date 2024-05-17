@@ -16,7 +16,7 @@
     </div>
 
     <!-- Option with ng-container as template ref for the switch and case statements -->
-    <ng-container [ngSwitch]="course.category">
+    <!-- <ng-container [ngSwitch]="course.category">
       <div class="course-category">
         <ng-container *ngSwitchCase="'BEGINNER'">
           <div class="category">Beginner</div>
@@ -31,15 +31,15 @@
           <div class="category">All levels</div>
         </ng-container>
       </div>
-    </ng-container>
+    </ng-container> -->
 
     <!-- Option without ng-container and ngSwitch(old syntax) -->
-    <!--<div class="course-category" [ngSwitch]="course.category">
+    <div class="course-category" [ngSwitch]="course.category">
       <div class="category" *ngSwitchCase="'BEGINNER'">Beginner</div>
       <div class="category" *ngSwitchCase="'INTERMEDIATE'">Intermediate</div>
       <div class="category" *ngSwitchCase="'ADVANCED'">Advanced</div>
       <div class="category" *ngSwitchDefault>All levels</div>
-    </div> -->
+    </div>
 
     <!-- new switch syntax with @switch -->
     <!-- @switch (course.category) { @case ("BEGINNER") {
